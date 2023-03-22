@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    <body>
+        
+    <img onclick="Executar('m');" src="maça.png" width="100px">
+    <img onclick="Executar('u');" src="uva.png" width="100px">
+    <img onclick="Executar('b');" src="banana.png" width="100px">
+    <img onclick="Executar('G');" src="Gustavo.png" width="100px">
+    <button onclick="Limpar();">Limpar</button>
+    <br> <br>
+        TOTAL DE MAÇÃS 🍎 : <span id="total_maça"> 0 </span>
+    <div class="maça" id="maça">
+        Clique em uma fruta
+    </div>
+    <br> <br>
+        TOTAL DE UVA 🍇 : <span id="total_uva"> 0 </span>
+    <div class="uva" id="uva">
+        Clique em uma fruta
+    </div>
+    <br> <br>
+        TOTAL DE BANANA 🍌: <span id="total_banana"> 0 </span>
+    <div class="banana" id="banana">
+        Clique em uma fruta
+    </div>
+    <br> <br>
+        TOTAL DE ANAO🐧  : <span id="total_Gustavo"> 0 </span>
+    <div class="Gustavo" id="Gustavo">
+        Clique em uma fruta
+    </div>
+
+
+</body>
+<script>
+    m = 0;
+    u = 0;
+    b = 0;
+    G = 0;
+    function Limpar()
+    {
+        
+       maça.innerHTML = "";             // LIMPAR A DIV PRINCIPAL
+       uva.innerHTML = "";
+       banana.innerHTML = "";
+       Gustavo.innerHTML = "";
+       total_maça.innerHTML  = "0";
+       total_uva.innerHTML    = "0";
+       total_banana.innerHTML  = "0";
+       total_Gustavo.innerHTML  = "0";
+       m = 0;
+       u = 0;
+       b = 0;
+
+
+    }
+    function Executar(letra)
+    {
+        if(letra == 'm')
+        {  
+            m = m + 1;
+            total_maça;innerHTML = m;
+            maça.innerHTML += " <img src='maça.png' width='100px'> ";
+        }
+        
+        if (letra == 'u')
+        {
+            u = u + 1;
+            total_uva;innerHTML = u;
+        uva.innerHTML += " <img src='uva.png' width='100px'>";
+         }
+
+         
+         if (letra == 'b')
+        {
+            b = b + 1;
+            total_banana;innerHTML = b;
+        banana.innerHTML += " <img src='banana.png' width='100px'>";
+         }  
+
+         if (letra == 'G')
+        {
+            G = G + 1;
+            total_Gustavo;innerHTML = G;
+        Gustavo.innerHTML += " <img src='Gustavo.png' width='100px'>";
+         }
+
+
+    }
+
+    
+</script>
+</html>
+
+
+
+
+
